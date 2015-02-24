@@ -132,6 +132,9 @@ angular
             if(isNaN(timestamp)) {
                 return value;
             } else {
+                if (!format) {
+                    format = 'hh:mm';
+                }
                 return _formatDuration(
                         timestamp,
                         _parseFormat(format)
